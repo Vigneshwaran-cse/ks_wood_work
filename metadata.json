@@ -1,0 +1,6 @@
+{
+  "name": "K.S Wood Work",
+  "description": "Premium Luxury Woodworking and Custom Wooden Furniture Studio by Kandhasamy in Minnathur",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
