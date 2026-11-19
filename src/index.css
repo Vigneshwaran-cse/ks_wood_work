@@ -1,37 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cinzel", Georgia, serif;
-  --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
-  
-  --color-gold: #C89B3C;
-  --color-gold-dark: #A67D2B;
-  --color-gold-light: #DFBA69;
-  --color-bg: #090909;
-  --color-surface: #151515;
-  --color-card: #1D1D1D;
-  --color-secondary-text: #B8B8B8;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Walnut warm dark palette */
+  --color-bg: #0F0C09;
+  --color-surface: #17120D;
+  --color-card: #1F1811;
+  --color-panel: #261D14;
+
+  /* Brass / antique gold accent */
+  --color-gold: #C5973A;
+  --color-gold-dark: #9A7328;
+  --color-gold-light: #DDB96A;
+  --color-gold-muted: rgba(197,151,58,0.12);
+
+  /* Ivory / warm text */
+  --color-ivory: #F5EDD8;
+  --color-secondary-text: #A89880;
+  --color-muted: #6B5B4A;
+
+  /* Wood accent tones */
+  --color-wood-light: #8B5E3C;
+  --color-wood-mid: #6B4423;
+  --color-wood-dark: #3D2410;
 }
 
-/* Base styles for premium presentation */
 body {
   background-color: var(--color-bg);
-  color: #ffffff;
+  color: var(--color-ivory);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
 
-/* Custom glow and backdrop-filter utilities for Tailwind */
+/* Premium scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-wood-mid);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-gold); }
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+/* Glass panel utility */
 .glass-panel {
-  background: rgba(21, 21, 21, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(200, 155, 60, 0.15);
+  background: rgba(31, 24, 17, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(197, 151, 58, 0.14);
 }
 
 .glass-panel-hover {
@@ -39,24 +76,67 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-panel-hover:hover {
-  background: rgba(29, 29, 29, 0.9);
-  border-color: rgba(200, 155, 60, 0.35);
-  box-shadow: 0 10px 30px -10px rgba(200, 155, 60, 0.15);
+  background: rgba(38, 29, 20, 0.9);
+  border-color: rgba(197, 151, 58, 0.32);
+  box-shadow: 0 12px 40px -10px rgba(197, 151, 58, 0.12);
   transform: translateY(-4px);
 }
 
-/* Smooth custom scrollbar for premium feel */
-::-webkit-scrollbar {
-  width: 8px;
+/* Wood grain texture utility */
+.wood-texture {
+  background-image:
+    repeating-linear-gradient(
+      88deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(139,94,60,0.05) 2px,
+      rgba(139,94,60,0.05) 4px
+    ),
+    repeating-linear-gradient(
+      92deg,
+      transparent 0px,
+      rgba(107,68,35,0.03) 1px,
+      transparent 2px
+    );
 }
-::-webkit-scrollbar-track {
-  background: #090909;
+
+/* Animated grain for hero panel */
+@keyframes grain-drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 60px; }
 }
-::-webkit-scrollbar-thumb {
-  background: #1D1D1D;
-  border: 2px solid #090909;
-  border-radius: 4px;
+
+.wood-grain-animated {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 3px,
+    rgba(139,94,60,0.07) 3px,
+    rgba(139,94,60,0.07) 4px,
+    transparent 4px,
+    transparent 9px,
+    rgba(107,68,35,0.05) 9px,
+    rgba(107,68,35,0.05) 10px
+  );
+  animation: grain-drift 8s linear infinite;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #C89B3C;
+
+/* 3D hero perspective stage */
+.hero-3d-stage {
+  perspective: 1200px;
+  perspective-origin: 50% 40%;
+}
+
+.hero-wood-panel {
+  transform-style: preserve-3d;
+}
+
+/* Smooth image containment */
+img {
+  max-width: 100%;
+}
+
+/* Section base */
+section {
+  position: relative;
 }

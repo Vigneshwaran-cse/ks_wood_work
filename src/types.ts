@@ -13,6 +13,7 @@ export interface WhyChooseUsItem {
 export interface ServiceItem {
   id: string;
   title: string;
+  tamilTitle?: string;
   description: string;
   details: string[];
   image: string;

@@ -58,78 +58,84 @@ export const WHY_CHOOSE_US_DATA: WhyChooseUsItem[] = [
 export const SERVICES_DATA: ServiceItem[] = [
   {
     id: "service-doors",
-    title: "கதவு பொருத்துதல்",
-    description: "Reliable timber door installation for main entrances, bedroom doors, and service entries using locally sourced wood and solid fixtures.",
+    title: "Door Fitting & Installation",
+    tamilTitle: "கதவு பொருத்துதல்",
+    description: "Reliable timber door installation for main entrances, bedroom doors, and service entries using solid wood and durable fixtures.",
     details: [
-      "Solid wood or seasoned hardwood door frames",
-      "Sturdy hinges, locking systems, and weather sealing",
-      "Precise on-site fitting for level and square alignment",
-      "Finish options in natural wood stain or PU lacquer"
+      "Solid wood and seasoned hardwood door frames",
+      "Sturdy brass or stainless steel hinges and locking hardware",
+      "Precise on-site plumb and square alignment",
+      "Natural wood polish, teak stain, or protective PU finish"
     ],
     image: new URL('./components/img/HomeEntrance.jpeg', import.meta.url).href,
     iconName: "DoorOpen"
   },
   {
     id: "service-windows",
-    title: "ஜன்னல் பொருத்துதல்",
-    description: "Fitted wooden window frames and shutters tailored for ventilation, privacy and a clean finish in traditional and modern home styles.",
+    title: "Window Fitting & Frames",
+    tamilTitle: "ஜன்னல் பொருத்துதல்",
+    description: "Fitted wooden window frames and shutters tailored for ventilation, privacy, and lasting weather resistance in modern and traditional homes.",
     details: [
-      "Custom-size wood window frames and sills",
-      "Fine craftsmanship for tight-fitting shutters",
-      "Weatherproof sealing and secure locking hardware",
-      "Paint, polish or varnish finish to match interiors"
+      "Custom-sized wood window frames and sills",
+      "Tight-fitting weather-sealed shutters",
+      "Durable latching hardware and safety grilles integration",
+      "Protective varnish or polish matching interior decor"
     ],
-    image: "https://5.imimg.com/data5/SELLER/Default/2025/2/491361541/KR/VQ/JI/13072978/wooden-window-installation-services-500x500.jpg",
+    image: new URL('./components/img/Window.jpeg', import.meta.url).href,
     iconName: "Window"
   },
   {
     id: "service-cupboards",
-    title: "மர அலமாரி வேலை",
-    description: "Custom fitted cupboards, wardrobes and storage units built to maximize room space and keep your home organized with strong wooden craftsmanship.",
+    title: "Custom Wardrobes & Cupboards",
+    tamilTitle: "மர அலமாரி வேலை",
+    description: "Fitted bedroom wardrobes, storage cupboards, and shelving units built to maximize room space with strong, durable wooden joinery.",
     details: [
-      "Floor-to-ceiling built-in wardrobe solutions",
-      "Soft-close drawers and cupboard hinges",
-      "Internal partitions for clothes, accessories and linens",
-      "Durable plywood cores with premium finish veneers"
+      "Built-in wardrobe units customized to room dimensions",
+      "Smooth sliding or hinged shutters with quality hardware",
+      "Internal partitions for clothing, linens, and accessories",
+      "Seasoned wood and durable commercial plywood construction"
     ],
-    image: "https://viswasinteriors.com/wp-content/uploads/2025/05/1000x1500-3.jpg",
+    image: new URL('./components/img/Wardrobe.jpeg', import.meta.url).href,
     iconName: "Columns"
   },
   {
     id: "service-repairs",
-    title: "பழுதுபார்க்கும் சேவை",
-    description: "Repair and restoration for doors, chairs, tables, cabinets and damaged wood surfaces with careful joinery and matching finish work.",
+    title: "Wood Repair & Restoration",
+    tamilTitle: "பழுதுபார்க்கும் சேவை",
+    description: "Careful repair and restoration for loose doors, sticking windows, damaged cupboards, chairs, tables, and worn wooden surfaces.",
     details: [
-      "Repair loose joints and broken frame connections",
-      "Replace damaged panels or rotten sections",
-      "Refinish surfaces to conceal scratches and stains",
-      "Strengthen hinges, runners and drawer slides"
+      "Fix loose mortise-tenon joints and broken frames",
+      "Replace decayed or damaged timber sections",
+      "Plane and re-align sticky doors and window shutters",
+      "Re-tighten and upgrade worn hinges, latches, and drawer slides"
     ],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV7OdrAPw07T1rj9hL5fmw7usgl1oElGv1sAqcOz8KGMZ2s4SSMEmhFG3T&s=10",
+    image: "https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=800&q=80",
     iconName: "Tool"
   },
   {
     id: "service-fittings",
-    title: "உள்துறை மர வேலை",
-    description: "Practical interior fittings such as skirting boards, paneling, shelves, TV units and wooden trims built to complement your home design.",
+    title: "Interior Wood Paneling & Trim",
+    tamilTitle: "உள்துறை மர வேலை",
+    description: "Architectural interior details including wall paneling, skirting boards, TV units, display ledges, and custom wooden trim work.",
     details: [
-      "Custom shelf and cabinet installations",
-      "Wall paneling, skirting and cornices",
-      "TV units, shoe racks and storage niches",
-      "Precise measurements for clean finish lines"
+      "Custom TV wall units, display cabinets, and shelving",
+      "Wooden skirting boards and ceiling trims",
+      "Handcrafted dining tables and custom wooden furniture",
+      "Clean bevels and neat joint detailing for seamless walls"
     ],
-    image: "https://m.media-amazon.com/images/I/71owsSU3lfL._SX679_.jpg",
+    image: new URL('./components/img/Table Chairs.jpeg', import.meta.url).href,
     iconName: "Layout"
   },
   {
     id: "service-carpentry",
-    title: "வீட்டு மர வேலைகள்",
-    description: "Complete home carpentry services including door frames, furniture, partitions and repairs to make your house function better and last longer.",
+    title: "Complete Home Carpentry",
+    tamilTitle: "வீட்டு மர வேலைகள்",
+    description: "Full residential carpentry services for renovations and new constructions — from framing to custom shrines and finish fittings.",
     details: [
-      "Structural carpentry and wood framing",
-      "Built-in wardrobes, kitchen cabinets, and shelves",
-      "Door and window frame replacement",
-      "On-site finishing and final adjustment work"
+      "Custom Pooja shrines (மண்டபம்) and decorative woodwork",
+      "Complete timber framing and structural woodwork",
+      "Comprehensive room-by-room wood fittings",
+      "On-site finishing, sanding, and final quality inspection"
     ],
     image: new URL('./components/img/Shrine.jpeg', import.meta.url).href,
     iconName: "Home"
@@ -139,73 +145,73 @@ export const SERVICES_DATA: ServiceItem[] = [
 export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "gal-1",
-    title: "Solid Teak Main Door",
+    title: "Solid Teak Main Entrance Door",
     category: "doors",
     image: new URL('./components/img/HomeEntrance.jpeg', import.meta.url).href,
-    description: "A sturdy entrance door installed with precise joinery and neat weather seals for lasting performance."
+    description: "Sturdy front entrance door installed with hand-fitted brass hardware and durable weather sealing."
   },
   {
     id: "gal-2",
-    title: "Fitted Window Shutters",
+    title: "Fitted Wooden Window Shutters",
     category: "windows",
     image: new URL('./components/img/Window.jpeg', import.meta.url).href,
-    description: "Custom wooden window shutters installed for light control and neat finishing around the frame."
+    description: "Custom wooden window frames and glazed shutters built for natural ventilation and clean sightlines."
   },
   {
     id: "gal-3",
-    title: "Cupboard Wardrobe Unit",
+    title: "Floor-to-Ceiling Wardrobe Unit",
     category: "cupboards",
     image: new URL('./components/img/Wardrobe.jpeg', import.meta.url).href,
-    description: "A built-in wardrobe fitted flush to the wall with smooth doors and practical storage compartments."
+    description: "Built-in bedroom storage with polished timber finish, internal clothing sections, and smooth hinges."
   },
   {
     id: "gal-4",
-    title: "Interior Wood Paneling",
+    title: "Handcrafted Traditional Pooja Mandir",
     category: "interiors",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE244RCnTYKVPv_xCHZ8xQvkvJ63jcVw9VLkiOcL69uH4b-G91db4ZQ_Ov&s=10",
-    description: "Wall paneling and wooden trims added to create a warm, finished interior look."
+    image: new URL('./components/img/Shrine.jpeg', import.meta.url).href,
+    description: "Detailed custom timber shrine with ornamental carving, storage drawer, and rich natural polish."
   },
   {
     id: "gal-5",
-    title: "Small Repair Job",
+    title: "Furniture Repair & Surface Restoration",
     category: "repairs",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV7OdrAPw07T1rj9hL5fmw7usgl1oElGv1sAqcOz8KGMZ2s4SSMEmhFG3T&s=10",
-    description: "Repair work on a wooden cabinet door, returned to smooth operation with matching finish."
+    image: "https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=800&q=80",
+    description: "Precision joinery repair, loose dowel reinforcement, and surface refinishing for wooden furniture."
   },
   {
     id: "gal-6",
-    title: "Fitted Kitchen Storage",
-    category: "cupboards",
-    image: "https://www.harveyjones.com/wp-content/uploads/2025/02/Small-Harvey-Jones-Antoniou-Laura-Rupolo-13-2.jpg",
-    description: "A custom kitchen storage unit built for efficient use of space and a durable finish."
+    title: "Solid Timber Dining Table & Chairs",
+    category: "interiors",
+    image: new URL('./components/img/Table Chairs.jpeg', import.meta.url).href,
+    description: "Handmade solid wood dining set with mortise and tenon joinery, comfortable seating, and satin luster."
   },
   {
     id: "gal-7",
-    title: "Window Frame Replacement",
+    title: "Hardwood Window Frame Replacement",
     category: "windows",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjaFPIqDoMJwsC5fG6Qe2osKYJdHrbYuQlF3Uv8HswP2bSiN742eroXso&s=10",
-    description: "Window frame replacement with a strong wooden profile and clean installation."
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+    description: "Structural window frame renewal with treated hardwood, neat reveals, and clean exterior sealant."
   },
   {
     id: "gal-8",
-    title: "Bedroom Closet Doors",
+    title: "Modular Bedroom Closet Storage",
     category: "cupboards",
-    image: "https://image.made-in-china.com/2f0j00wvpVCeUlnzGK/Wardrobe-Bi-Folding-Sliding-Door-System-for-Closet-2-or-4-Panel-Door-Bifold.jpg",
-    description: "Matching wardrobe doors installed to fit the bedroom layout with polished hardware."
+    image: new URL('./components/img/Wardrobe.jpeg', import.meta.url).href,
+    description: "Tailored wardrobe compartments and wooden drawers built to maximize storage space."
   },
   {
     id: "gal-9",
-    title: "Door Repair & Refinish",
-    category: "repairs",
-    image: "https://content.jdmagicbox.com/comp/def_content_category/door-repair-and-services/a69485af4f-door-repair-and-services-3-953pa.jpg",
-    description: "A repaired door with refreshed finish and restored strength at the hinges."
+    title: "Handcrafted Teak Accent Chair",
+    category: "interiors",
+    image: new URL('./components/img/chair.jpeg', import.meta.url).href,
+    description: "Custom wooden accent chair with ergonomic curved backrest, clean joinery, and durable frame."
   },
   {
     id: "gal-10",
-    title: "Home Entrance Fitting",
-    category: "interiors",
+    title: "Entrance Door Architrave & Frame",
+    category: "doors",
     image: new URL('./components/img/HomeEntrance.jpeg', import.meta.url).href,
-    description: "An entrance feature with wood trims and practical built-in storage around the door."
+    description: "Complete entrance carpentry including solid frame installation, architrave molding, and heavy-duty locks."
   }
 ];
 
@@ -284,27 +290,58 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
 export const FAQ_DATA: FAQItem[] = [
   {
     id: "faq-1",
-    question: "What types of premium wood does K.S WOOD WORK use?",
-    answer: "We source premium seasoned woods. Our signature creations utilize A-Grade Nilambur Teakwood, Indian Rosewood (Eeti), premium Padauk, African Mahogany, and seasoned Jackwood (Palaa) which are known for striking natural grain profiles and heavy structural integrity."
+    question: "What types of wood do you use?",
+    answer: "We work with well-seasoned, locally sourced timber suited to the job — solid teak and hardwood for door frames and main doors, good-quality plywood cores for wardrobes, and treated timber for window frames. The specific wood selected depends on your requirements and budget."
   },
   {
     id: "faq-2",
-    question: "Do you offer free on-site design consultation and site measurements?",
-    answer: "Yes. For major custom woodworking and full home interior works, we conduct physical site visits to take hyper-accurate on-site measurements. We discuss the wood grades, styling, and design sketches directly with you and your architect."
+    question: "Do you visit the site before starting work?",
+    answer: "Yes. For door fitting, wardrobe builds, and other larger jobs, Kandhasamy or his team will visit the site to take accurate measurements and understand the space before any work begins. Contact us by phone or WhatsApp to arrange a visit."
   },
   {
     id: "faq-3",
-    question: "Can you replicate design blueprints provided by our private interior designer?",
-    answer: "Absolutely. We specialize in bespoke collaboration. We translate designer blueprints, CAD files, or 3D Max concepts into flawless physical items, adapting appropriate joinery systems to ensure structural longevity."
+    question: "Can you match an existing design or follow a plan?",
+    answer: "Yes. If you have a design in mind, a photo reference, or a plan from an architect or interior designer, share it with us and we will work to match it as closely as possible in the actual timber."
   },
   {
     id: "faq-4",
-    question: "How does K.S WOOD WORK protect timber against termites and swelling?",
-    answer: "All our timber undergoes a multi-layer protective process. We utilize seasoned, moisture-controlled kiln-dried wood, execute eco-friendly organic anti-termite chemical wood-infusions, and seal all grain pathways with premium marine-grade PU primers."
+    question: "How do you protect woodwork against termites and moisture?",
+    answer: "We use seasoned timber and apply appropriate anti-termite treatment and sealant finishes as standard practice. The specific treatment depends on the type of work and the materials used."
   },
   {
     id: "faq-5",
-    question: "What is the typical timeline for manufacturing custom wardrobes or doors?",
-    answer: "Each luxury item is hand-built with high care. Typically, custom entrance doors and pooja shrines take 3 to 4 weeks, while a full-house custom woodwork interior (wardrobes, modular paneling, dining set, beds) takes about 4 to 6 weeks from final blueprint approval."
+    question: "How long does the work typically take?",
+    answer: "A single door fitting or repair is usually completed in one visit. Custom wardrobes or a set of windows generally take one to two weeks depending on complexity and materials. Full interior woodwork for a home is discussed and scheduled individually."
+  }
+];
+
+export const WORKING_PROCESS_DATA: WorkingStep[] = [
+  {
+    id: "step-1",
+    stepNumber: "01",
+    title: "Contact & Enquiry",
+    description: "Call or send a WhatsApp message describing what you need — a door fitting, new wardrobe, window repair, or full home carpentry. We will confirm availability and arrange a visit.",
+    iconName: "MessageSquare"
+  },
+  {
+    id: "step-2",
+    stepNumber: "02",
+    title: "Site Visit & Measurement",
+    description: "Kandhasamy or his team visits your home to take accurate on-site measurements, understand the space, and agree on materials, design, and a fair quote.",
+    iconName: "Ruler"
+  },
+  {
+    id: "step-3",
+    stepNumber: "03",
+    title: "Material Selection & Fabrication",
+    description: "Good-quality seasoned timber and hardware are selected for the job. The carpentry work is crafted carefully — whether in the workshop or on-site.",
+    iconName: "Hammer"
+  },
+  {
+    id: "step-4",
+    stepNumber: "04",
+    title: "Installation & Final Finish",
+    description: "Everything is fitted precisely on-site, checked for level and alignment, and finished to a clean standard. We tidy up and hand over work ready to use.",
+    iconName: "Home"
   }
 ];

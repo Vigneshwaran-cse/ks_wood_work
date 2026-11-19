@@ -6,76 +6,99 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FAQ_DATA } from "../data";
+import { TEXT } from "../data/language";
 import { ChevronDown } from "lucide-react";
 
 export default function FAQ() {
-  const [openId, setOpenId] = useState<string | null>("faq-1"); // Default open first FAQ item
-
-  const toggleFAQ = (id: string) => {
-    setOpenId((prev) => (prev === id ? null : id));
-  };
+  const [openId, setOpenId] = useState<string | null>(null);
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-surface relative overflow-hidden">
-      {/* Background visual beams */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-gold/[0.02] rounded-full blur-[120px] pointer-events-none" />
+    <section
+      id="faq"
+      className="py-24 md:py-32 relative overflow-hidden"
+      style={{ background: "var(--color-bg)" }}
+    >
+      <div
+        className="absolute top-1/2 right-1/4 w-80 h-80 pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse, rgba(197,151,58,0.04) 0%, transparent 70%)",
+        }}
+      />
 
-      <div className="max-w-4xl mx-auto px-6 relative z-10 text-left">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-          <span className="text-[10px] md:text-xs uppercase font-sans tracking-[0.4em] text-gold font-semibold">
-            Common Inquiries
+      <div className="max-w-3xl mx-auto px-6 md:px-12 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-14 space-y-4">
+          <span
+            className="text-[10px] md:text-xs uppercase font-sans tracking-[0.4em] font-semibold"
+            style={{ color: "var(--color-gold)" }}
+          >
+            {TEXT.faqSubtitle}
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-            Frequently Asked Questions
+          <h2
+            className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight"
+            style={{ color: "var(--color-ivory)" }}
+          >
+            {TEXT.faqTitle}
           </h2>
-          <div className="w-16 h-[1px] bg-gold mx-auto my-2" />
-          <p className="font-sans text-secondary-text text-sm md:text-base font-light leading-relaxed">
-            Everything you need to know about our premium timber curation, custom designs, warranties, and delivery workflows.
-          </p>
+          <div
+            className="w-12 h-[1px] mx-auto"
+            style={{
+              background: "linear-gradient(90deg, transparent, var(--color-gold), transparent)",
+            }}
+          />
         </div>
 
-        {/* Accordion List */}
-        <div className="space-y-4">
+        {/* Accordion */}
+        <div className="space-y-3">
           {FAQ_DATA.map((item) => {
             const isOpen = openId === item.id;
             return (
               <div
                 key={item.id}
-                className={`glass-panel rounded-[2px] overflow-hidden transition-all duration-300 ${
-                  isOpen ? "border-gold/35 bg-card" : "hover:border-gold/25"
-                }`}
+                className="rounded-sm border overflow-hidden transition-colors duration-300"
+                style={{
+                  background: "var(--color-card)",
+                  borderColor: isOpen ? "rgba(197,151,58,0.3)" : "rgba(197,151,58,0.1)",
+                }}
               >
-                {/* Accordion Title Header */}
                 <button
-                  onClick={() => toggleFAQ(item.id)}
-                  className="w-full py-6 px-6 sm:px-8 flex items-center justify-between text-left focus:outline-none group"
+                  onClick={() => setOpenId(isOpen ? null : item.id)}
+                  className="w-full flex items-center justify-between px-7 py-5 text-left gap-4"
+                  aria-expanded={isOpen}
                 >
-                  <h3 className="font-serif text-sm sm:text-base font-bold text-white tracking-wide group-hover:text-gold transition-colors duration-300 pr-4">
-                    {item.question}
-                  </h3>
-                  <div
-                    className={`p-2.5 rounded-[2px] border border-white/5 bg-surface text-secondary-text group-hover:text-gold group-hover:border-gold/30 transition-all duration-300 shrink-0 ${
-                      isOpen ? "rotate-180 border-gold/30 text-gold" : ""
-                    }`}
+                  <span
+                    className="font-serif text-base md:text-lg font-semibold leading-snug"
+                    style={{ color: isOpen ? "var(--color-gold)" : "var(--color-ivory)" }}
                   >
-                    <ChevronDown size={14} className="transition-transform duration-300" />
-                  </div>
+                    {item.question}
+                  </span>
+                  <motion.div
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="shrink-0"
+                    style={{ color: "var(--color-gold)" }}
+                  >
+                    <ChevronDown size={18} />
+                  </motion.div>
                 </button>
 
-                {/* Expanded Answer Content */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                      className="overflow-hidden"
                     >
-                      <div className="px-6 sm:px-8 pb-6 border-t border-gold/10 pt-4">
-                        <p className="font-sans text-xs sm:text-sm text-secondary-text font-light leading-relaxed">
-                          {item.answer}
-                        </p>
+                      <div
+                        className="px-7 pb-6 font-sans text-sm font-light leading-relaxed border-t pt-4"
+                        style={{
+                          color: "var(--color-secondary-text)",
+                          borderColor: "rgba(197,151,58,0.1)",
+                        }}
+                      >
+                        {item.answer}
                       </div>
                     </motion.div>
                   )}
